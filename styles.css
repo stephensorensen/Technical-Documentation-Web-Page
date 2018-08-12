@@ -63,7 +63,26 @@ section{
 .main-section{
 	position: relative;
 	margin-left: 250px;
+	margin-top: 15px;
 	
+}
+
+section p{
+	font-size: 13px;
+}
+
+section span{
+	margin-top: 15px;
+	font-size: 13px;
+}
+
+section code{
+	background-color: #696969;
+	color: #000000;
+	margin: 10px 0;
+	padding: 10px 150px;
+	border-radius: 10px;
+	letter-spacing: 2px;
 }
 
 header {

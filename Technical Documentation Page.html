@@ -4,9 +4,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" type="text/css" href="styles.css">
 		
-	<!-- uncomment to test
+	 uncomment to test
 		<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
-		-->
+	
 	</head>
 	<body>
 	<!--Nav-->
@@ -14,8 +14,7 @@
 			<header>
 				<span>A Guide to CSS Grid</span>
 				<ul>
-					<li><a class="nav-link" href="#Introduction">Introduction</a></li>
-					<li><a class="nav-link" href="#css_grid">CSS Grid</a></li>
+					<li><a class="nav-link" href="#introduction">Introduction</a></li>
 					<li><a class="nav-link" href="#grid_layout">Grid Layout</a></li>
 					<li><a class="nav-link" href="#grid_elements">Grid Elements</a></li>
 					<li><a class="nav-link" href="#display_property">Display Property</a></li>
@@ -40,76 +39,128 @@
 		
 		<!--Main content-->
 		<main id="main-doc">
-			<section class="main-section" id="Introduction">
+			<section class="main-section" id="introduction">
 				<header><h1>Introduction</h1></header>
 				<p>
-				consectetur adipiscing elit ut aliquam purus sit amet luctus venenatis lectus magna fringilla urna porttitor
-				</p>
-			</section>
-			<section class="main-section" id="css_grid">
-				<header><h2>CSS Grid</h2></header>
-				<p>
-				consectetur adipiscing elit ut aliquam purus sit amet luctus venenatis lectus magna fringilla urna porttitor
+				CSS Grid Layout is the most powerful layout system available in CSS. It is a 2-dimensional system, meaning it can handle both columns and rows, unlike flexbox which is largely a 1-dimensional system. You work with Grid Layout by applying CSS rules both to a parent element (which becomes the Grid Container) and to that elements children (which become Grid Items).
 				</p>
 			</section>
 			<section class="main-section" id="grid_layout">
 				<header ><h2>Grid Layout</h2></header>
 				<p>
-				consectetur adipiscing elit ut aliquam purus sit amet luctus venenatis lectus magna fringilla urna porttitor
+				The CSS Grid Layout Module offers a grid-based layout system, with rows and columns, making it easier to design web pages without having to use floats and positioning.
 				</p>
 			</section>
 			<section class="main-section" id="grid_elements">
 				<header><h2>Grid Elements</h2></header>
 				<p>
-				consectetur adipiscing elit ut aliquam purus sit amet luctus venenatis lectus magna fringilla urna porttitor
+				A grid layout consists of a parent element, with one or more child elements.
 				</p>
+				<span>Example:</span>
+				<code>
+					&lt;div class="grid-container"&gt;<br>
+					&lt;div class="grid-item"&gt;1&lt;/div&gt;<br>
+					&lt;div class="grid-item"&gt;2&lt;/div&gt;<br>
+					&lt;div class="grid-item"&gt;3&lt;/div&gt;<br>
+					&lt;div class="grid-item"&gt;4&lt;/div&gt;<br>
+					&lt;div class="grid-item"&gt;5&lt;/div&gt;<br>
+					&lt;div class="grid-item"&gt;6&lt;/div&gt;<br>
+					&lt;div class="grid-item"&gt;7&lt;/div&gt;<br>
+					&lt;div class="grid-item"&gt;8&lt;/div&gt;<br>
+					&lt;div class="grid-item"&gt;9&lt;/div&gt;	
+				</code>
 			</section>
 			<section class="main-section" id="display_property">
 				<header><h2>Display Property</h2></header>
 				<p>
-				consectetur adipiscing elit ut aliquam purus sit amet luctus venenatis lectus magna fringilla urna porttitor
+				An HTML element becomes a grid container by setting the display property to grid or inline-grid.
+				</p>
+				<span>Example:</span>
+				<code>
+					.grid-container { <br>
+					display: grid; <br>
+					}
+				</code>
+				<p>
+				All direct children of the grid container automatically become grid items.
 				</p>
 			</section>
 			<section class="main-section" id="grid_columns">
 				<header><h2>Grid Columns</h2></header>
 				<p>
-				consectetur adipiscing elit ut aliquam purus sit amet luctus venenatis lectus magna fringilla urna porttitor
+				The vertical line of grid items are called columns.
 				</p>
+				<code>
+					Sample code. 
+				</code>
 			</section>
 			<section class="main-section" id="grid_rows">
 				<header><h2>Grid Rows</h2></header>
 				<p>
-				consectetur adipiscing elit ut aliquam purus sit amet luctus venenatis lectus magna fringilla urna porttitor
+				The horizontal line of grid items are called rows.
 				</p>
+				<code>
+					Sample code. 
+				</code>
 			</section>
 			<section class="main-section" id="grid_gaps">
 				<header><h2>Grid Gaps</h2></header>
 				<p>
-				consectetur adipiscing elit ut aliquam purus sit amet luctus venenatis lectus magna fringilla urna porttitor
+				The space between each column/row are called gaps.
+				</p>
+				<code>
+					Sample code. 
+				</code>
+				<p>
+				You can adjust the gap size by using one of the following properties:
+				<ul>
+					<li>grid-column-gap</li>
+					<li>grid-row-gap</li>
+					<li>grid-gap</li>
+				</ul>
 				</p>
 			</section>
 			<section class="main-section" id="grid_lines">
 				<header><h2>Grid Lines</h2></header>
-				<p>
-				consectetur adipiscing elit ut aliquam purus sit amet luctus venenatis lectus magna fringilla urna porttitor
-				</p>
+				<ul>
+					<li>The line between columns are called column lines.</li> 
+					<li>The line between rows are called row lines.</li>
+				</ul>
+				<code>
+					Sample code. 
+				</code>
 			</section>
 			<section class="main-section" id="grid_container">
 				<header><h2>Grid Container</h2></header>
 				<p>
-				consectetur adipiscing elit ut aliquam purus sit amet luctus venenatis lectus magna fringilla urna porttitor
+				To make an HTML element behave as a grid container, you have to set the display property to grid or inline-grid.<br>
+
+Grid containers consist of grid items, placed inside columns and rows.To make an HTML element behave as a grid container, you have to set the display property to grid or inline-grid.
+
+Grid containers consist of grid items, placed inside columns and rows.
 				</p>
 			</section>
 			<section class="main-section" id="template_columns">
 				<header><h2>The grid-template-columns Property</h2></header>
 				<p>
-				consectetur adipiscing elit ut aliquam purus sit amet luctus venenatis lectus magna fringilla urna porttitor
+				The grid-template-columns property defines the number of columns in your grid layout, and it can define the width of each column.<br>
+
+				The value is a space-separated-list, where each value defines the length of the respective column.<br>
+
+				If you want your grid layout to contain 4 columns, specify the width of the 4 columns, or "auto" if all columns should have the same width.
 				</p>
+				<span>Example:</span>
+				<code>
+					.grid-container{ <br>
+					display: grid; <br>
+					grid-template-columns: auto auto auto auto; <br>
+					}
+				</code>
 			</section>
 			<section class="main-section" id="template_rows">
 				<header><h2>The grid-template-rows Property</h2></header>
 				<p>
-				consectetur adipiscing elit ut aliquam purus sit amet luctus venenatis lectus magna fringilla urna porttitor
+					The grid-template-rows property defines the height of each row.
 				</p>
 			</section>
 			<section class="main-section" id="justify_content">

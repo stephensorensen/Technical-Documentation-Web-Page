@@ -24,6 +24,11 @@ body{
 	background-color: #01579B; 
 }
 
+p{
+	font-size: 13px;
+	font-family: 'Montserrat', sans-serif;
+}
+
 /*Nav-bar*/
 nav.side-menu{
 	margin-left: 15px;
@@ -51,7 +56,6 @@ nav.side-menu a:hover{
 	color: #03A9F4;
 }
 
-
 /*Main content*/
 section{
   display: flex;
@@ -67,7 +71,7 @@ section{
 	
 }
 
-section p{
+section ul li {
 	font-size: 13px;
 }
 
@@ -78,9 +82,9 @@ section span{
 
 section code{
 	background-color: #696969;
-	color: #000000;
-	margin: 10px 0;
-	padding: 10px 150px;
+	color: #40C4FF;
+	margin: 4px 0;
+	padding: 10px 20px;
 	border-radius: 10px;
 	letter-spacing: 2px;
 }
@@ -90,6 +94,33 @@ header {
   font-size: 24px;
 }
 
+/*Mobile*/
+@media (max-width: 650px){
+	.wrapper{
+		display: flex;
+		flex-direction: column;
+		
+	}
+	
+	nav.side-menu{
+		position: relative;
+		width: 100%;
+		text-align: center;
+	}
+	
+	nav ul{
+		display: flex;
+		flex-direction: column;
+	}
+	
+	main{
+		flex-direction: column;
+		width: 100%;
+		margin-left: -15%;
+		margin-top: 5vh;
+	}
+	
+}
 
 
 

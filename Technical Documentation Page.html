@@ -33,7 +33,6 @@
 					<li><a class="nav-link" href="#css_grid-row_property">CSS grid-row Property</a></li>
 					<li><a class="nav-link" href="#css_grid-area_property">CSS grid-area Property</a></li>
 					<li><a class="nav-link" href="#naming_grid_items">Naming Grid Items</a></li>
-					<li><a class="nav-link" href="#the_order_of_the_items">The Order of the Items</a></li>
 				</ul>
 			</header>
 		</nav>
@@ -163,18 +162,124 @@ Grid containers consist of grid items, placed inside columns and rows.
 				<p>
 					The grid-template-rows property defines the height of each row.
 				</p>
+				<p>
+					The value is a space-separated-list, where each value defines the the height of the respective row:
+				</p>
+				<span>Example:</span>
+				<code>
+					.grid-container { <br>
+					display: grid; <br>
+					grid-template-rows: 80px 200px; <br>
+					}	
+				</code>
 			</section>
 			<section class="main-section" id="the_justify-content_property">
 				<header><h2>The justify-content Property</h2></header>
 				<p>
-				consectetur adipiscing elit ut aliquam purus sit amet luctus venenatis lectus magna fringilla urna porttitor
+					The justify-content property is used to align the whole grid inside the container.
 				</p>
+				<span>Example:</span>
+				<code>
+					.grid-container { <br>
+					display: grid; <br>
+					justify-content:<strong> space-evenly;</strong> <br>
+					}
+				</code>
+				<span>
+					<strong>Note:</strong>The grid's total width has to be less than the container's width for the justify-content property to have any effect.
+				</span>
+				<span>Example:</span>
+				<code>
+					.grid-container { <br>
+					display: grid; <br>
+					justify-content:<strong> space-around;</strong> <br>
+					}
+				</code>
+				<span>Example:</span>
+				<code>
+					.grid-container { <br>
+					display: grid; <br>
+					justify-content:<strong> space-between;</strong> <br>
+					}
+				</code>
+				<span>Example:</span>
+				<code>
+					.grid-container { <br>
+					display: grid; <br>
+					justify-content:<strong> center;</strong> <br>
+					}
+				</code>
+				<span>Example:</span>
+				<code>
+					.grid-container { <br>
+					display: grid; <br>
+					justify-content:<strong> start;</strong> <br>
+					}
+				</code>
+				<span>Example:</span>
+				<code>
+					.grid-container { <br>
+					display: grid; <br>
+					justify-content:<strong> end;</strong> <br>
+					}
+				</code>
 			</section>
 			<section class="main-section" id="the_align-content_property">
 				<header><h2>The align-content Property</h2></header>
 				<p>
-				consectetur adipiscing elit ut aliquam purus sit amet luctus venenatis lectus magna fringilla urna porttitor
+				The align-content property is used to vertically align the whole grid inside the container.
 				</p>
+				<span>Example</span>
+				<code>
+				.grid-container { <br>
+				display: grid; <br>
+				height: 400px; <br>
+				align-content: <strong> center; </strong> <br>
+				}
+				</code>
+				<span>
+					<strong>Note:</strong>The grid's total height has to be less than the container's height for the align-content property to have any effect
+				</span>
+				<span>Example</span>
+				<code>
+				.grid-container { <br>
+				display: grid; <br>
+				height: 400px; <br>
+				align-content: <strong> space-evenly; </strong> <br>
+				}
+				</code>
+				<span>Example</span>
+				<code>
+				.grid-container { <br>
+				display: grid; <br>
+				height: 400px; <br>
+				align-content: <strong> space-around; </strong> <br>
+				}
+				</code>
+				<span>Example</span>
+				<code>
+				.grid-container { <br>
+				display: grid; <br>
+				height: 400px; <br>
+				align-content: <strong> space-between; </strong> <br>
+				}
+				</code>
+				<span>Example</span>
+				<code>
+				.grid-container { <br>
+				display: grid; <br>
+				height: 400px; <br>
+				align-content: <strong> start; </strong> <br>
+				}
+				</code>
+				<span>Example</span>
+				<code>
+				.grid-container { <br>
+				display: grid; <br>
+				height: 400px; <br>
+				align-content: <strong> end; </strong> <br>
+				}
+				</code>
 			</section>
 			<section class="main-section" id="css_grid_item">
 				<header><h2>CSS Grid Item</h2></header>
@@ -185,34 +290,92 @@ Grid containers consist of grid items, placed inside columns and rows.
 			<section class="main-section" id="css_grid-column_property">
 				<header><h2>CSS grid-column Property</h2></header>
 				<p>
-				consectetur adipiscing elit ut aliquam purus sit amet luctus venenatis lectus magna fringilla urna porttitor
+				The grid-column property defines on which column(s) to place an item. <br>
+
+				You define where the item will start, and where the item will end.
+				<span>
+					<strong>Note:</strong>The grid-column property is a shorthand property for the grid-column-start and the grid-column-end properties.
+				</span>
 				</p>
+				<span>Example</span>
+				<p>
+				Make "item1" start on line 1 and end on line 5:
+				</p>
+				<code>
+				.item1 { <br>
+				grid-column: 1 / 5; <br>
+				}
+				</code>
+				<span>Example</span>
+				<p>
+				Make "item2" start on column 2 and span 3 columns:
+				</p>
+				<code>
+				.item2 { <br>
+				grid-column: 2 / span 3; <br>
+				}
+				</code>
 			</section>
 			<section class="main-section" id="css_grid-row_property">
 				<header><h2>CSS grid-row Property</h2></header>
 				<p>
-				consectetur adipiscing elit ut aliquam purus sit amet luctus venenatis lectus magna fringilla urna porttitor
+				The grid-row property defines on which row to place an item.<br>
+
+				You define where the item will start, and where the item will end.
 				</p>
+				<span>
+					<strong>Note:</strong>The grid-row property is a shorthand property for the grid-row-start and the grid-row-end properties.
+				</span>
+				<span>Example</span>
+				<p>
+				Make "item1" start on row-line 1 and end on row-line 4:
+				</p>
+				<code>
+				.item1 { <br>
+				grid-row: 1/ 4; <br>
+				}
+				</code>
 			</section>
 			<section class="main-section" id="css_grid-area_property">
 				<header><h2>CSS grid-area Property</h2></header>
 				<p>
-				consectetur adipiscing elit ut aliquam purus sit amet luctus venenatis lectus magna fringilla urna porttitor
+				The grid-area property can be used as a shorthand property for the grid-row-start, grid-column-start, grid-row-end and the grid-column-end properties.
 				</p>
+				<span>Example</span>
+				<p>
+				Make "item8" start on row-line 1 and column-line 2, and end on row-line 5 and column line 6:
+				</p>
+				<code>
+				.item1 { <br>
+				grid-area: 1 / 2 / 5 / 6; <br>
+				}
+				</code>
 			</section>
 			<section class="main-section" id="naming_grid_items">
 				<header><h2>Naming Grid Items</h2></header>
 				<p>
-				consectetur adipiscing elit ut aliquam purus sit amet luctus venenatis lectus magna fringilla urna porttitor
+				The grid-area property can also be used to assign names to grid items. <br>
+				Named grid items can be referred to by the grid-template-areas property of the grid container.
 				</p>
-			</section>
-			<section class="main-section" id="the_order_of_the_items">
-				<header><h2>The Order of the Items</h2></header>
+				<span>Example</span>
 				<p>
-				consectetur adipiscing elit ut aliquam purus sit amet luctus venenatis lectus magna fringilla urna porttitor
+				Item1 gets the name "myArea" and spans all five columns in a five columns grid layout:
 				</p>
+				<code>
+				.item1 { <br>
+				grid-area: myArea; <br>
+				} <br>
+				.grid-container { <br>
+				grid-template-areas: 'myArea myArea myArea myArea myArea'; <br>
+				} 
+				</code>
+				<p>
+				Each row is defined by apostrophes (' ') <br>
+
+				The columns in each row is defined inside the apostrophes, separated by a space.
+				</p>
+				<span><strong>Note:</strong>A period sign represents a grid item with no name.</span>
 			</section>
-	
 		</main>
 	</div>
 	</body>
